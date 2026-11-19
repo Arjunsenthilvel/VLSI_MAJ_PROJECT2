@@ -1,0 +1,14 @@
+$ iverilog -o uart_sim uart_tx.v uart_rx.v uart_tb.v
+$ vvp uart_sim
+VCD info: dumpfile dump.vcd opened for output.
+[989 us] PASS  sent=0xa5  received=0xa5
+[2031 us] PASS  sent=0x5a  received=0x5a
+[3073 us] PASS  sent=0x00  received=0x00
+[4115 us] PASS  sent=0xff  received=0xff
+[5157 us] PASS  sent=0x48  received=0x48
+[6199 us] PASS  sent=0x69  received=0x69
+[7241 us] PASS  sent=0x01  received=0x01
+[8283 us] PASS  sent=0x80  received=0x80
+----------------------------------------
+RESULT: ALL 8 TESTS PASSED
+uart_tb.v:46: $finish called at 8336350000 (1ps)
